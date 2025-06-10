@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=1400"><!--다른 매체에서도 너비 오류 없이 볼 수 있게-->
+  <link href="./images/favicon.png" rel="icon" type="image/png" sizes="32x32"><!--파비콘-->
+  <title>UMFU</title>
+  <!-- 폰트 연결 -->
+  <link rel="stylesheet" href="./css/font.css">
+<link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="jquery.simplyscroll.css" media="all" type="text/css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- fixed -->
+  <header>
+    <a href="#none"><img id="menu" src="./images/btn_menu.png" alt="메뉴"><img id="menu_hover"
+        src="./images/btn_menu_hover.png" alt="메뉴"></a>
+
+    <div class="nav">
+      <a href="#"><img src="./images/logo.png" alt="로고"></a>
+
+      <ul>
+        <li><a href="#" onclick="moveBrand()">BRAND</a></li>
+        <li><a href="#" onclick="moveProduct()">PRODUCT</a></li>
+        <li><a href="#" onclick="moveReview()">REVIEW</a></li>
+        <li><a href="#" onclick="moveRecipe()">RECIPE</a></li>
+        <li><a href="#" onclick="moveCommunity()">COMMUNITY</a></li>
+      </ul>
+    </div>
+    <a href="#none"><img id="search" src="./images/btn_search.png" alt="검색"><img id="search_hover"
+        src="./images/btn_search_hover.png" alt="검색"></a>
+  </header>
+
+  <div class="fixed_btn">
+  <a href="#" class="btn"><img id="cart" src="./images/btn_cart.png" alt="장바구니로 이동"></a>
+  <a href="#" class="btn"><img id="top" src="./images/btn_top.png" alt="맨 위로 이동"></a>
+  </div>  
+
+  <div id="left_popup">
+<ul>
+  <li><a href="#none">LOG IN</a></li>
+  <li><a href="#none">JOIN</a></li>
+  <li><a href="#none">MY PAGE</a></li>
+  <li><a href="#none">CART</a></li>
+  <li><a href="#none">WISH LIST</a></li>
+  <li><a href="#none">ORDER</a></li>
+  <li><a href="#none">CUSTOMER SERVICE</a></li>
+</ul>
+  <a href="#none" class="logout">LOG OUT</a>
+  </div>
+
+  <!-- fixed -->
+
+  <!-- video(임시) -->
+  <video id="video" src="./images/video.mp4" autoplay playsinline muted loop></video>
+
+  <!-- brand story -->
+  <div class="brand_st">
+    <h1>BRAND STORY</h1>
+    <p>왜 UMFU여야 할까요?</p>
+
+    <ul class="story_box">
+      <li class="img1"><img class="character_1 wow bounceIn" data-wow-offset="500" src="./images/character_1.png" alt="콩 캐릭터"></li>
+      <li class="text1">
+        <h2><span>국산 콩</span>으로 만든 두유</h2>
+        <p>100% 국산 대두를 사용해서 정성껏 만든 두유예요. <br>좋은 재료는 좋은 하루를 만든다고 믿기에, <br>언제나 신선하고 믿을 수 있는 것만 담았습니다.</p>
+      </li>
+    </ul>
+
+    <ul class="story_box">
+      <li class="text2">
+        <h2>우유를 마실 때마다 <span>배가 아프다면?</span></h2>
+        <p>한국인의 75%는 유당불내증을 앓고 있어요. <br>우유만 마시면 배가 아픈 당신. <br>유당불내증을 일으키지 않는 두유로 건강을 되찾아 볼까요?</p>
+      </li>
+      <li class="img2 wrap"><img class="character_2 wow flipInX" data-wow-offset="500" src="./images/character_2.png" alt="아파하는 콩 캐릭터"></li>
+    </ul>
+
+    <ul class="story_box">
+      <li class="img1"><img class="character_3 wow swing" data-wow-offset="500" src="./images/character_3.png" alt="커피를 마시는 콩 캐릭터"></li>
+      <li class="text3">
+        <h2><span>환경을 파괴하지 않는</span> 라떼</h2>
+        <p>두유는 우유보다 최대 3배나 적은 탄소를 배출해요. <br>작은 선택이 지구에 큰 변화를 만들 수 있어요.<br>지구를 위한 부드러운 한 잔, 소이라떼로 하루를 기분 좋게 채워보세요.</p>
+      </li>
+    </ul>
+  </div><!-- .brand_st -->
+
+  <!-- brand identity -->
+  <div class="brand_id">
+    <h1>BRAND IDENTITY</h1>
+    <p>UMFU의 철학을 담은 브랜드 로고를 소개합니다.</p>
+
+    <div class="main">
+      <h4>Main</h4>
+      <img src="./images/logo_main.png" alt="메인로고">
+    </div>
+
+    <div class="sub">
+      <ul>
+        <li>
+          <h4>Sub</h4>
+          <img class="sub_logo" src="./images/logo_sub.png" alt="서브로고">
+        </li>
+        <li>
+          <h4>Slogan</h4>
+          <img class="slogan" src="./images/slogan.png" alt="슬로건">
+        </li>
+      </ul>
+    </div><!-- sub -->
+    <p class="center">편안함과 생기를 담은 자연의 그린을 메인 컬러로 사용했습니다. <br>
+      두유팩을 형상화한 사각 프레임 안에는 귀여운 콩 캐릭터가 자리잡고 있어요. 자연에서 온 영양소를 상징하는 이 사랑스러운 콩이 당신의 건강한 일상을 응원할거예요. <br>
+      슬로건 'Unmilk for you'에는 당신의 선택을 존중하고, 나아가 더 나은 삶을 위한 대체유라는 의미를 담았어요.</p>
+  </div><!-- .brand_id -->
+
+  <!-- new_product -->
+  <div class="new_product">
+    <h1 class="center">NEW PRODUCT</h1>
+
+    <!-- Swiper -->
+    <div class="swiper promotion">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="p_text white">
+            <p class="yellow">EVENT 01</p>
+            <h3>더 완벽한 홈카페를 위해</h3>
+            <h2>움푸 머그컵 출시 기념 <br>
+              1 + 1 이벤트 프로모션</h2>
+            <h4>~8월 31일까지 한정수량</h4>
+
+          </div>
+          <a href="#" class="white">
+            <p>자세히보기</p>
+          </a>
+          <img src="./images/banner_01.png" alt="프로모션 배너 1">
+        </div>
+        <div class="swiper-slide">
+          <div class="p_text">
+            <p class="orange">EVENT 02</p>
+            <h3>더 건강한 일상으로가는 한걸음</h3>
+            <h2>사먹는 외식 대신, <br>
+              나를 위한 도시락을 <br>
+              준비해 보는건 어떨까요?</h2>
+
+          </div>
+          <a href="#">
+            <p>자세히보기</p>
+          </a>
+          <img src="./images/banner_02.png" alt="프로모션 배너 2">
+        </div>
+        <div class="swiper-slide">
+          <div class="p_text white">
+            <p class="yellow">EVENT 03</p>
+            <h3>매번 다시 주문할 필요 없이</h3>
+            <h2>정기구독 고객 대상 <br>
+              무료배송 혜택</h2>
+            <h4>10,000원 이상 주문시 적용가능</h4>
+          </div>
+          <a href="#" class="white">
+            <p>자세히보기</p>
+          </a>
+          <img src="./images/banner_03.png" alt="프로모션 배너 3">
+        </div>
+        <div class="swiper-slide">
+          <div class="p_text">
+            <p class="red">EVENT 04</p>
+            <h3>움푸 두유가 대용량으로 돌아왔어요!</h3>
+            <h2>UMFU 바리스타 <br>
+              신제품 대용량팩 출시</h2>
+          </div>
+          <a href="#">
+            <p>자세히보기</p>
+          </a>
+
+          <img src="./images/banner_04.png" alt="프로모션 배너 4">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="scroll">
+      <img src="./images/icon_mouse.png" alt="마우스 아이콘">
+      <p>전체 상품을 보려면 스크롤</p>
+      <img src="./images/icon_scroll.png" alt="화살표">
+    </div><!-- scroll -->
+  </div><!-- new_product -->
+
+  <!-- all_product -->
+  <div id="all_product">
+    <h1 class="center">ALL PRODUCT</h1>
+
+    <ul class="category">
+      <li><a class="on" href="#none">ALL</a></li>
+      <li><a href="#none">SOYMILK</a></li>
+      <li><a href="#none">FOOD</a></li>
+      <li><a href="#none">GOODS</a></li>
+    </ul>
+
+    <div class="product_view">
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_01.png" alt="움푸 플레인">
+        </div>
+        <h4>움푸 플레인 (190ml)</h4>
+        <p>담백하고 깔끔한 맛</p>
+        <h3><span>1,200원</span> 1,100원</h3>
+      </a>
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_02.png" alt="움푸 더블랙">
+        </div>
+        <h4>움푸 더블랙 (190ml)</h4>
+        <p>흑임자와 서리태의 고소한 맛</p>
+        <h3><span>1,400원</span> 1,200원</h3>
+      </a>
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_03.png" alt="움푸 초콜릿">
+        </div>
+        <h4>움푸 초콜릿 (190ml)</h4>
+        <p>달콤하고 부드러운 맛</p>
+        <h3>1,400원</h3>
+      </a>
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_04.png" alt="움푸 스트로베리">
+        </div>
+        <h4>움푸 스트로베리 (190m...</h4>
+        <p>부드러운 딸기 맛</p>
+        <h3>1,400원</h3>
+      </a>
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_05.png" alt="움푸 바리스타">
+        </div>
+        <h4>움푸 바리스타 (950ml)</h4>
+        <p>대용량으로 즐기는 무첨가두유</p>
+        <h3><span>6,600원</span> 5,300원</h3>
+      </a>
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_06.png" alt="움푸 머그컵">
+        </div>
+        <h4>움푸 머그컵 (2 color)</h4>
+        <p>1 + 1 행사 중이에요!</p>
+        <h3>12,900원</h3>
+      </a>
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_07.png" alt="움푸 런치박스">
+        </div>
+        <h4>움푸 런치박스</h4>
+        <p>수저가 들어있어요</p>
+        <h3>7,900원</h3>
+      </a>
+      <a href="#" class="item">
+        <div class="item_box wow flipInX">
+          <img class="view_more" src="./images/view_more.png" alt="상세보기">
+          <img class="item_img" src="./images/product_08.png" alt="움푸 텀블러">
+        </div>
+        <h4>움푸 텀블러 (473ml)</h4>
+        <p>보온/밀폐 기능성 good </p>
+        <h3>10,900원</h3>
+      </a>
+    </div>
+  </div><!-- all_product -->
+
+  <!-- review -->
+  <div id="review">
+    <h1 class="center">REVIEW</h1>
+    <P class="center">UMFU의 상품을 최근에 구매한 소비자들의 후기예요.</P>
+    <ul class="wrap">
+      <li data-aos="fade-up">
+        <div class="proflie">
+          <img src="./images/profile_1.png" alt="프로필사진">
+          <div class="profile_text">
+            <p><strong>nyang023****</strong></p>
+            <img src="./images/stars5.png" alt="5점">
+            <p>2025.03.11.</p>
+            <p><span>움푸 더블랙(190ml)
+              </span></p>
+          </div><!-- profile_text -->
+        </div><!-- proflie -->
+        <h4>아침밥 걱정 안 해도 돼요.</h4>
+        <p>한 팩에 190ml라서 적은가 싶었는데 생각보다 포만감이 있어요. 아침을 거르는 날이 많은데, 이 두유 하나면 속이 든든해요! <br>패키지도 너무 귀여워서 먹을때마다 기분이 좋아져요.</p>
+      </li>
+      <li class="up" data-aos="fade-up">
+        <div class="proflie">
+          <img src="./images/profile_2.png" alt="프로필사진">
+          <div class="profile_text">
+            <p><strong>kim_su****</strong></p>
+            <img src="./images/stars5.png" alt="5점">
+            <p>2025.04.23.</p>
+            <p><span>움푸 플레인 정기구독
+              </span></p>
+          </div><!-- profile_text -->
+        </div><!-- proflie -->
+        <h4>정기구독이 최고네요</h4>
+        <p>두유 정기구독은 처음 해 보는데, 한 달에 24팩  구독하니 딱 좋아요. <br>
+          식이섬유와 단백질이 풍부해서 다이어트에도 도움이 될 것 같아요.
+        </p>
+      </li>
+      <li data-aos="fade-up">
+        <div class="proflie">
+
+          <img src="./images/profile_3.png" alt="프로필사진">
+          <div class="profile_text">
+            <p><strong>lovelee89****</strong></p>
+            <img src="./images/stars5.png" alt="5점">
+            <p>2025.05.01.</p>
+            <p><span>움푸 초콜릿(190ml)
+              </span></p>
+          </div><!-- profile_text -->
+        </div><!-- proflie -->
+        <h4>고소하고 맛있어요.</h4>
+        <p>개인적으로 콩비린내를 좋아하지 않아서 <br>초콜릿으로 구매했는데, 설탕이 들어가지 않았는데도 전혀 비리지 않고 달달한 맛만 나서 정말 맛있어요. <br>아이와 같이 먹어도 좋을 것 같네요.</p>
+      </li>
+    </ul>
+  </div><!-- review -->
+
+  <!-- recipe -->
+  <div id="recipe">
+    <div class="recipe">
+    <h1>RECIPE</h1>
+    <p>UMFU와 여러분이 함께 만드는 맛있는 레시피북</p>
+    <a href="#none">레시피북 바로가기</a>
+    </div>
+
+    <ul id="recipe_scroller">
+      <li><!-- 두유크림파스타 -->
+        <div class="recipe_text">
+        <h2>두유크림파스타</h2>
+        <p>생크림 없이도 뚝딱!
+          <br>집에서 고급스러운 파스타 만들기</p>
+      </div>
+      <a href="#none"><img src="./images/view_more.png" alt="상세보기"></a>
+              <img src="./images/recipe_01.png" alt="두유크림파스타">
+      </li>
+      <li><!-- 두유고구마라떼 -->
+        <div class="recipe_text">
+        <h2>고구마두유라떼</h2>
+        <p>우유보다 더 맛있어요^^ 
+          <br>부드럽고 달콤하게 겨울나기</p>
+      </div>
+      <a href="#none"><img src="./images/view_more.png" alt="상세보기"></a>
+        <img src="./images/recipe_02.jpg" alt="고구마두유라떼">
+      </li>
+      <li><!-- 두유콩국수 -->
+        <div class="recipe_text">
+        <h2>두유콩국수</h2>
+        <p>집에서 쉽게 먹는 여름 별미
+          <br>이제 콩물 살 필요 없어요</p>
+      </div>
+      <a href="#none"><img src="./images/view_more.png" alt="상세보기"></a>
+        <img src="./images/recipe_03.jpg" alt="두유콩국수">
+      </li>
+      <li><!-- 두유바나나스무디 -->
+        <div class="recipe_text">
+        <h2>두유바나나쉐이크</h2>
+        <p>아침식사 대용으로 딱~</p>
+      </div>
+      <a href="#none"><img src="./images/view_more.png" alt="상세보기"></a>
+        <img src="./images/recipe_04.jpg" alt="두유바나나쉐이크">
+      </li>
+      <li><!-- 두유바게트 -->
+        <div class="recipe_text">
+        <h2>두유바게트</h2>
+        <p>오리지널 바게트보다 촉촉하고 고소한 홈메이드 빵</p>
+      </div>
+      <a href="#none"><img src="./images/view_more.png" alt="상세보기"></a>
+        <img src="./images/recipe_05.jpg" alt="두유바게트">
+      </li>
+      <li><!-- 두유된장찌개 -->
+        <div class="recipe_text">
+        <h2>두유된장찌개</h2>
+        <p>두유를 부드러운 육수로 활용하면
+          <br>새로운 국물요리의 세계가 열릴거예요.</p>
+      </div>
+     <a href="#none"><img src="./images/view_more.png" alt="상세보기"></a>
+        <img src="./images/recipe_06.png" alt="두유된장찌개">
+      </li>
+      <li><!-- 두유푸딩 -->
+        <div class="recipe_text">
+        <h2>두유푸딩</h2>
+        <p>고소하고 달달한 캐러멜소스와
+          <br>한입에 떠 먹는 푸딩</p>
+      </div>
+      <a href="#none"><img src="./images/view_more.png" alt="상세보기"></a>
+        <img src="./images/recipe_07.jpg" alt="두유푸딩">
+      </li>
+      <li><!-- 두유계란찜 -->
+        <div class="recipe_text">
+        <h2>두유계란찜</h2>
+        <p>자꾸 퍼먹고싶어지는 맛</p>
+      </div>
+      <a href=""><img class="recipe_more" src="./images/view_more.png" alt="상세보기"></a>
+              <img src="./images/recipe_08.jpg" alt="두유계란찜">
+      </li>
+    </ul>
+  </div><!-- recipe -->
+
+  <!-- event -->
+  <div id="event">
+<h1>EVENT</h1>
+<ul class="event_bn">
+  <li><a href="#none">
+    <div class="event_text">
+<h1>지금 회원가입하면 <br>
+20% 할인 쿠폰 증정</h1>
+<p>신규가입 회원 한정 쿠폰</p>
+    </div>
+    <img src="./images/small_bnn1.png" alt="신규가입 회원 이벤트 배너">
+  </a></li>
+  <li><a href="#none">
+    <div class="event_text white">
+<h1>움푸 이용 고객 이벤트 <br>
+리뷰쓰고 혜택받자!</h1>
+<p>추첨을 통해 최대 5만원 쿠폰 증정</p>
+<p>상시이벤트</p>
+    </div>
+    <img src="./images/small_bnn2.png" alt="리뷰 이벤트 배너">
+  </a></li>
+</ul>
+  </div><!-- event -->
+
+  <!-- community -->
+  <div id="community">
+    <div id="com_box">
+<h1>COMMUNITY</h1>
+<ul>
+  <li class="on com_fir">
+    <h2>공지사항</h2>
+    <h3>Announcement</h3>
+<img src="./images/Announcement.png" alt="공지사항 아이콘">
+<ol>
+  <li><a href="#" class="border">6월 공휴일로 인한 배송예정일 변동 안내<span>2025. 05. 21.</span></a></li>
+  <li><a href="#">5월 리뷰 이벤트 당첨자 안내<span>2025. 05. 12.</span></a></li>
+  <li><a href="#">5월 공휴일로 인한 배송예정일 변동 안내<span>2025. 04. 19.</span></a></li>
+  <li><a href="#">4월 리뷰 이벤트 당첨자 안내<span>2025. 04. 12.</span></a></li>
+  <li><a href="#">3월 공휴일로 인한 배송예정일 변동 안내<span>2025. 02. 21.</span></a></li>
+  <li><a href="#">새해 이벤트 당첨자 안내<span>2024. 12. 31.</span></a></li>
+</ol>
+  </li>
+  <li class="com_sec">
+    <h2>Q&A</h2>
+    <h3>자주 묻는 질문</h3>
+<img src="./images//QnA.png" alt="Q&A 아이콘">
+<ol>
+  <li><a href="#" class="border">Q. 정기구독 배송 날짜는 언제인가요?</a></li>
+  <li><a href="#">Q. 두유가 터져서 왔어요. 어떡하죠?</a></li>
+  <li><a href="#">Q. 배송기간은 며칠 걸리나요?</a></li>
+  <li><a href="#">Q. 리뷰리벤트는 어떻게 참여하나요?</a></li>
+  <li><a href="#">Q. 주문 취소 후 환불까지 얼마나 걸릴까요?</a></li>
+  <li><a href="#">Q. 두유 유통기한이 얼마나 되나요?</a></li>
+</ol>
+  </li>
+  <li class="com_thr">
+    <h2>고객상담</h2>
+    <h3>Customer Service</h3>
+<img src="./images/CS.png" alt="상담서비스 아이콘">
+<div class="cs_in">
+  <img src="./images/headset.png" alt="전화상담">
+  <p>TEL : 051 - 6981 - 3353
+    <br>09 : 00 am ~ 06 : 30 pm
+  </p>
+</div>
+<div class="cs_in">
+  <img src="./images/speech-bubble.png" alt="채팅상담">
+  <a class="cschat" href="#">채팅 상담 바로가기</a>
+</div>
+  </li>
+</ul>
+
+</div>
+  </div><!-- community -->
+
+<footer>
+<div class="footer_in">
+  <div class="footer_box">
+  <ul class="footer_link">
+    <li><a href="#none">오시는 길</a></li>
+    <li>｜</li>
+    <li><a href="#none">뉴스레터</a></li>
+    <li>｜</li>
+    <li><a href="#none">개인정보 처리 방침</a></li>
+    <li>｜</li>
+    <li><a href="#none">개인정보 수집 거부</a></li>
+  </ul>
+  <ul class="footer_sns">
+    <li><a href="#none"><img src="./images/sns_instagram.png" alt="instargram"></a></li>
+    <li><a href="#none"><img src="./images/sns_fbook.png" alt="facebook"></a></li>
+    <li><a href="#none"><img src="./images/sns_twitter.png" alt="twitter"></a></li>
+    <li><a href="#none"><img src="./images/sns_youtube.png" alt="youtube"></a></li>
+  </ul>
+  </div><!-- footer_box -->
+  <div class="footer_box">
+  <p>(주)움푸
+    <br>대표 : 전성희 사업자 등록 번호 : 820-32-18534 <br>주소 : 부산광역시 부산진구 전포대로 199번길 15 6층
+  <br>이메일 : UMFU_cs@umfu.com</p>
+  <a href="#"><img src="./images/logo_main.png" alt="푸터 로고"></a>
+  </div><!-- footer_box -->
+</div><!-- footer_in -->
+</footer>
+
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script/wow.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./script/jquery.simplyscroll.js"></script>
+  <script src="./script/script.js"></script>
+
+</body>
+
+</html>
