@@ -160,6 +160,7 @@ header {
 .intro{
     overflow-x: hidden;
     text-align: center;
+    width:100%;
 }
 
 #video {
