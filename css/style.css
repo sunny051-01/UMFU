@@ -158,7 +158,8 @@ header {
 
 /* video */
 .intro{
-        overflow-x: hidden;
+    overflow-x: hidden;
+    text-align: center;
 }
 
 #video {
