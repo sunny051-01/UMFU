@@ -154,13 +154,16 @@ header {
 #left_popup a:hover {
     color: #3ea357;
 }
-
 /* fixed */
 
 /* video */
+.intro{
+        overflow-x: hidden;
+}
+
 #video {
     display: block;
-    height: 100%;
+    width: 100vw;
 }
 
 /* brand story */
