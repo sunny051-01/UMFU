@@ -160,12 +160,12 @@ header {
 .intro{
     overflow-x: hidden;
     text-align: center;
-    width:100%;
+    width:100vw;
 }
 
 #video {
     display: block;
-    width: 100vw;
+    width: 100%;
 }
 
 /* brand story */
